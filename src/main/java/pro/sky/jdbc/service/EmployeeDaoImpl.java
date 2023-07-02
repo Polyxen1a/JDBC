@@ -42,7 +42,6 @@ public class EmployeeDaoImpl implements EmployeeDao {
             transaction.commit();
         }
     }
-
     @Override
     public void deleteEmployee(Employee employee) {
         try (Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession()) {

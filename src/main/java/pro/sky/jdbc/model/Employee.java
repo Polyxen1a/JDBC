@@ -11,7 +11,6 @@ import lombok.*;
 @ToString
 @EqualsAndHashCode(exclude = {"id"})
 @ManyToOne
-
 @Entity
 @Table(name = "employee")
 
