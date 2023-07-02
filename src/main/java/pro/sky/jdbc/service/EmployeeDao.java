@@ -4,6 +4,7 @@ import pro.sky.jdbc.model.Employee;
 
 import java.util.List;
 
+
 public interface EmployeeDao {
     void add(Employee employee);
 

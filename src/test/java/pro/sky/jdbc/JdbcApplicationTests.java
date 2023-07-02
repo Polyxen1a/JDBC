@@ -1,7 +1,6 @@
 package pro.sky.jdbc;
 
 import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
 import pro.sky.jdbc.model.Employee;
 import pro.sky.jdbc.service.EmployeeDao;
 import pro.sky.jdbc.service.EmployeeDaoImpl;
@@ -9,7 +8,6 @@ import pro.sky.jdbc.service.EmployeeDaoImpl;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-@SpringBootTest
 class JdbcApplicationTests {
 
     private final EmployeeDao dao = EmployeeDaoImpl();

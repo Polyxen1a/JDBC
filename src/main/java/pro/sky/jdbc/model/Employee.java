@@ -3,12 +3,14 @@ package pro.sky.jdbc.model;
 import lombok.*;
 
 
+
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
 @EqualsAndHashCode(exclude = {"id"})
+@ManyToOne
 
 @Entity
 @Table(name = "employee")
@@ -27,5 +29,5 @@ public class Employee {
     @Column(name = "age")
     private int age;
     @Column(name = "city_id")
-    private City city;
+    private int city;
 }

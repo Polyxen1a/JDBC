@@ -1,9 +1,5 @@
 package pro.sky.jdbc.service;
 
-import org.apache.catalina.core.StandardService;
-import org.hibernate.SessionFactory;
-import org.hibernate.boot.registry.StandardServiceRegistryBouider;
-import org.hibernate.cfg.Configuration;
 import pro.sky.jdbc.model.Employee;
 
 
