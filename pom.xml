@@ -19,60 +19,42 @@
     <groupId>org.mockito</groupId>
     <artifactId>mockito-junit-jupiter</artifactId>
     <version>test</version>
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
+    <dependency>
+        <groupId>org.junit.jupiter</groupId>
         <artifactId>junit-jupiter-params</artifactId>
         <version>5.9.2.</version>
     </dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>1.18.26</version>
-        <dependency>
-            <groupId>org.postgresql</groupId>
-            <artifactId>postgresql</artifactId>
-            <version>42.5.4</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-    <groupId>org.apache.maven.plugins</groupId>
-    <artifactId>maven-compiler-plugin</artifactId>
-    <version>3.8.1</version>
-    <groupId>org.hibernate</groupId>
-    <artifactId>hibernate-core</artifactId>
-    <version>5.6.14.Final</version>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-devtools</artifactId>
-            <scope>runtime</scope>
-            <optional>true</optional>
-        </dependency>
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <optional>true</optional>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
-                    <excludes>
-                        <exclude>
-                            <groupId>org.projectlombok</groupId>
-                            <artifactId>lombok</artifactId>
-                        </exclude>
-                    </excludes>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
+    <groupId>org.projectlombok</groupId>
+    <artifactId>lombok</artifactId>
+    <version>1.18.26</version>
+    <dependency>
+        <groupId>org.postgresql</groupId>
+        <artifactId>postgresql</artifactId>
+        <version>42.5.4</version>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-devtools</artifactId>
+        <scope>runtime</scope>
+        <optional>true</optional>
+    </dependency>
+    <dependency>
+        <groupId>org.projectlombok</groupId>
+        <artifactId>lombok</artifactId>
+        <optional>true</optional>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-test</artifactId>
+        <scope>test</scope>
+    </dependency>
+    <properties>
+        <maven.compiler.sourse>16</maven.compiler.sourse>
+        <maven.compiler.target>16</maven.compiler.target>
+    </properties>
 
 </project>
