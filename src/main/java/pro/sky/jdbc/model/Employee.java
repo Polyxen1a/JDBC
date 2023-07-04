@@ -1,16 +1,9 @@
 package pro.sky.jdbc.model;
 
-import lombok.*;
+
+import javax.persistence.*;
 
 
-
-@Getter
-@Setter
-@AllArgsConstructor
-@NoArgsConstructor
-@ToString
-@EqualsAndHashCode(exclude = {"id"})
-@ManyToOne
 @Entity
 @Table(name = "employee")
 

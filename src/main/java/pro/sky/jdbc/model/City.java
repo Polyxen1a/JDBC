@@ -1,12 +1,6 @@
 package pro.sky.jdbc.model;
 
-import lombok.*;
 
-@AllArgsConstructor
-@NoArgsConstructor
-@Getter
-@Setter
-@ToString
 
 public class City {
 
