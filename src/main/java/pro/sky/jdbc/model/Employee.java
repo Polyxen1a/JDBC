@@ -1,11 +1,17 @@
 package pro.sky.jdbc.model;
 
 
+import lombok.*;
+
 import javax.persistence.*;
 
-
+@Getter
+@Setter
+@NoArgsConstructor
+@ToString
 @Entity
 @Table(name = "employee")
+@EqualsAndHashCode(exclude = {"id"})
 
 public class Employee {
     @Id
@@ -22,4 +28,10 @@ public class Employee {
     private int age;
     @Column(name = "city_id")
     private int city;
+
+    public Employee(int i, String robert, String hunter, String m, int i1, int i2) {
+    }
+
+    public void setId(Integer employeeId) {
+    }
 }

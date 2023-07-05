@@ -1,5 +1,6 @@
 package pro.sky.jdbc.service;
 
+import org.hibernate.SessionBuilder;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
@@ -19,5 +20,9 @@ public class HibernateSessionFactoryUtil {
             }
         }
         return sessionFactory();
+    }
+
+    public static SessionBuilder<SessionBuilder> getSessionFactory() {
+        return null;
     }
 }

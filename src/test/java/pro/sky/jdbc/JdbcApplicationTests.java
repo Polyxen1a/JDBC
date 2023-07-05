@@ -1,8 +1,12 @@
 package pro.sky.jdbc;
 
+import org.testng.annotations.Test;
 import pro.sky.jdbc.model.Employee;
 import pro.sky.jdbc.service.EmployeeDao;
 import pro.sky.jdbc.service.EmployeeDaoImpl;
+
+import static org.testng.AssertJUnit.assertFalse;
+import static org.testng.AssertJUnit.assertTrue;
 
 
 class JdbcApplicationTests {
