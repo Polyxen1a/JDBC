@@ -82,6 +82,10 @@ public class EmployeeDaoImpl implements EmployeeDao {
             throw new RuntimeException(e);
         }
     }
+
+    @Override
+    public void update(Employee e) {
+    }
 }
 
 
