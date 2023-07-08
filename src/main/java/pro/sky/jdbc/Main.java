@@ -1,36 +1,21 @@
 package pro.sky.jdbc;
-import java.sql.*;
+import pro.sky.jdbc.model.Employee;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 
 public class Main {
 
-    public static void main(String[] args) throws SQLException {
-        final String user = "postgres";
-        final String password = "postgres";
-        final String url = "jdbc:postgresql://localhost:5432/newbase";
+    public static void main(String[] args) {
 
-        try (final Connection connection = DriverManager.getConnection(url, user, password)) {
-            PreparedStatement statement = connection.prepareStatement("" +
-                    "SELECT * FROM employee WHERE id = (?)");
+        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("myPersistenceUnit");
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
 
-            statement.setInt(1, 1);
-            final ResultSet resultSet = statement.executeQuery();
+        Employee employee = entityManager.find(Employee.class, 1);
+        System.out.println(employee);
 
-            if (resultSet.next()) {
-                String name = "Name: " + resultSet.getString("first_name");
-                String surname = "Surname: " + resultSet.getString("last_name");
-                String gender = "Gender: " + resultSet.getString(4);
-                int age = resultSet.getInt(5);
-
-                System.out.println(name);
-                System.out.println(surname);
-                System.out.println(gender);
-                System.out.println("Age: " + age);
-            }
-        }
+        entityManager.close();
+        entityManagerFactory.close();
     }
 }
