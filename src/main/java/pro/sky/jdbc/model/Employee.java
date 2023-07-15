@@ -8,6 +8,8 @@ import javax.persistence.*;
 @Getter
 @Setter
 @NoArgsConstructor
+@AllArgsConstructor
+@Builder
 @ToString
 @Entity
 @Table(name = "employee")
@@ -26,8 +28,10 @@ public class Employee {
     private String gender;
     @Column(name = "age")
     private int age;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "city_id")
     @Column(name = "city_id")
-    private int city;
+    private City city;
 
     @Override
     public String toString() {
@@ -82,10 +86,10 @@ public class Employee {
     }
 
     public int getCity() {
-        return city;
+        return city.getCity_id();
     }
 
-    public void setCity(int city) {
+    public void setCity(City city) {
         this.city = city;
     }
 

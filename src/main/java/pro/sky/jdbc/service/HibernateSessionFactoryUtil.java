@@ -1,5 +1,6 @@
 package pro.sky.jdbc.service;
 
+import org.hibernate.Session;
 import org.hibernate.SessionBuilder;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
@@ -8,6 +9,8 @@ import pro.sky.jdbc.model.Employee;
 
 
 public class HibernateSessionFactoryUtil {
+    public static Session getSessionFactory;
+
     private static SessionFactory sessionFactory() {
         if (sessionFactory() == null) {
             try {
